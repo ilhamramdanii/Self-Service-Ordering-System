@@ -5,26 +5,26 @@
 [![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 
-**SelfOrder** adalah platform pemesanan mandiri (self-service) berbasis web yang dirancang untuk meningkatkan efisiensi operasional restoran. Aplikasi ini memungkinkan pelanggan memesan langsung dari meja menggunakan QR Code dan memberikan panel manajemen lengkap untuk admin, dapur, dan kasir secara real-time.
+**SelfOrder** is a web-based self-service ordering platform designed to enhance restaurant operational efficiency. This application allows customers to order directly from their tables via QR Codes and provides a comprehensive management panel for admins, kitchen staff, and cashiers in real-time.
 
-##  Fitur Utama
+##  Key Features
 
-- **Customer Self-Ordering:** Antarmuka responsif untuk pelanggan memilih menu, kustomisasi pesanan, dan checkout langsung dari perangkat mereka.
-- **Real-time Order Tracking:** Integrasi **Server-Sent Events (SSE)** untuk pembaruan status pesanan instan ke bagian dapur dan kasir.
-- **Admin Dashboard:** Statistik penjualan, laporan pendapatan, dan manajemen inventaris menu yang komprehensif.
-- **Kitchen Display System (KDS):** Panel khusus dapur untuk memproses pesanan masuk berdasarkan antrean.
-- **Cashier Management:** Manajemen pembayaran yang terintegrasi dengan status meja.
-- **Table Management:** Pengaturan tata letak meja dan pembuatan QR Code unik untuk setiap meja.
-- **Dynamic Menu:** Kelola kategori, harga, ketersediaan stok, dan gambar menu secara dinamis.
+- **Customer Self-Ordering:** A responsive interface for customers to browse menus, customize orders, and checkout directly from their own devices.
+- **Real-time Order Tracking:** Integrated **Server-Sent Events (SSE)** for instant order status updates to the kitchen and cashier stations.
+- **Admin Dashboard:** Comprehensive sales statistics, revenue reports, and menu inventory management.
+- **Kitchen Display System (KDS):** A dedicated panel for kitchen staff to process incoming orders based on queue priority.
+- **Cashier Management:** Integrated payment management with real-time table status tracking.
+- **Table Management:** Table layout configuration and unique QR Code generation for every table.
+- **Dynamic Menu:** Manage categories, pricing, stock availability, and menu images dynamically.
 
-##  Arsitektur Sistem
+##  System Architecture
 
-Project ini dibangun dengan fokus pada performa dan skalabilitas:
+The project is built with a focus on performance and scalability:
 
-1.  **Full-stack Next.js:** Menggunakan **App Router** untuk performa routing yang optimal dan Server Components.
-2.  **Type-safe Database:** Menggunakan **Prisma ORM** dengan PostgreSQL/Supabase untuk integritas data yang kuat.
-3.  **State Management:** Menggunakan **Zustand** untuk pengelolaan cart pelanggan yang ringan dan cepat.
-4.  **Real-time Communication:** Implementasi SSE (Server-Sent Events) untuk sinkronisasi data tanpa beban berlebih pada server.
+1.  **Full-stack Next.js:** Utilizing the **App Router** for optimal routing performance and Server Components.
+2.  **Type-safe Database:** Powered by **Prisma ORM** with PostgreSQL/Supabase for robust data integrity.
+3.  **State Management:** Leveraging **Zustand** for a lightweight and fast customer cart management.
+4.  **Real-time Communication:** Implementation of SSE (Server-Sent Events) for data synchronization without excessive server overhead.
 
 ##  Tech Stack
 
@@ -36,52 +36,52 @@ Project ini dibangun dengan fokus pada performa dan skalabilitas:
 - **Real-time:** Server-Sent Events (SSE)
 - **Authentication:** NextAuth.js
 
-##  Memulai
+##  Getting Started
 
-### Prasyarat
-- Node.js (Versi Terbaru)
-- PostgreSQL Database (Bisa menggunakan Supabase)
+### Prerequisites
+- Node.js (Latest Version)
+- PostgreSQL Database (Supabase recommended)
 
-### Langkah Instalasi
+### Installation Steps
 
-1.  **Clone Repository:**
+1.  **Clone the Repository:**
     ```bash
     https://github.com/ilhamramdanii/Self-Service-Ordering-System.git
-    cd self-service-ordering
+    cd Self-Service-Ordering-System
     ```
 
-2.  **Instal Dependensi:**
+2.  **Install Dependencies:**
     ```bash
     npm install
     ```
 
-3.  **Konfigurasi Environment:**
-    Salin file `.env.example` menjadi `.env` dan isi dengan kredensial database Anda:
+3.  **Configure Environment:**
+    Copy the `.env.example` file to `.env` and fill in your database credentials:
     ```bash
     DATABASE_URL="postgresql://..."
     NEXTAUTH_SECRET="your-secret"
     ```
 
 4.  **Setup Database:**
-    Jalankan migrasi Prisma untuk menyiapkan struktur tabel:
+    Run Prisma migrations to prepare the table structures:
     ```bash
     npx prisma migrate dev
     ```
 
-5.  **Jalankan Aplikasi:**
+5.  **Run the Application:**
     ```bash
     npm run dev
     ```
 
-##  Validasi
+##  Validation
 
-Jalankan linter untuk memastikan kualitas kode tetap terjaga:
+Run the linter to ensure code quality is maintained:
 ```bash
 npm run lint
 ```
 
-##  Lisensi
-Project ini dilisensikan di bawah MIT License - lihat file [LICENSE] untuk detailnya.
+##  License
+This project is licensed under the MIT License - see the [LICENSE] file for details.
 
 ---
 *Built with ❤️ by ilhamramdanii*
